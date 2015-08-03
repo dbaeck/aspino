@@ -1,4 +1,4 @@
-BUILD = release
+BUILD = debug
 
 
 ########## Available targets
