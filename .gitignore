@@ -29,3 +29,5 @@
 .idea/
 CMakeLists.txt
 build/
+patches/glucose-syrup.tgz
+src/glucose-syrup/
