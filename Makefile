@@ -3,7 +3,7 @@ BUILD = debug
 
 ########## Available targets
 
-cxxflags.debug =    -DTRACE_ON -DSAFE_EXIT -g
+cxxflags.debug =    -DTRACE_ON -DCUSTOM_TRACE -DSAFE_EXIT -g
 linkflags.debug =   -g
 
 cxxflags.trace =    -DNDEBUG -DTRACE_ON -O3

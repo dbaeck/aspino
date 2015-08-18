@@ -15,19 +15,13 @@
  *
  */
 
-#ifndef __trace_h__
-#define __trace_h__
-
-#ifdef CUSTOM_TRACE
-    #include "customtrace.h"
-#else
-
-#ifndef TRACE_ON
-    #define trace(type, level, msg)
-#else
+#ifndef __customtrace_h__
+#define __customtrace_h__
 
 #include <cstdio>
 #include <string>
+#include <iostream>
+#include <sstream>
 
 #include <utils/Options.h>
 
@@ -37,14 +31,19 @@ extern Glucose::IntOption option_trace_maxsat;
 extern Glucose::IntOption option_trace_asp;
 extern Glucose::IntOption option_trace_asp_pre;
 
+
+enum Color {
+    NONE = 0,
+    BLACK, RED, GREEN,
+    YELLOW, BLUE, MAGENTA,
+    CYAN, WHITE
+};
+
+std::string set_color(Color foreground = NONE, Color background = NONE);
+
 #define trace(type, level, msg) \
-    if(option_trace_##type >= level) {\
-        std::cerr << "[" << #type << "]";\
-        for(int __trace_i__ = 0; __trace_i__ < level; __trace_i__++) std::cerr << " ";\
-        std::cerr << msg << std::endl;\
+    if(200 >= level) {\
+        std::cout << set_color(GREEN) << "[" << #type << "]" << std::string(level, ' ') << msg << set_color() << std::endl;\
     }
 
-#endif
-
-#endif
 #endif

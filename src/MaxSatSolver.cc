@@ -354,6 +354,38 @@ lbool MaxSatSolver::solve() {
     return l_True;
 }
 
+void MaxSatSolver::dump()
+{
+    cout << set_color(CYAN) << "[ D U M P (Solver) ]" << endl;
+
+    cout << "Soft Literals: " <<  this->softLiterals << endl;
+    cout << "Weights: " << this->weights << endl;
+
+    cout << "Trail: " << this->trail << endl;
+
+    cout << "Assumptions: " << this->assumptions << endl;
+    cout << "Vardata: " << endl;
+
+    for (int i = 0; i< this->vardata.size(); i++) {
+        cout << "var " << i << ": " << this->value(i) << " : " << this->reason(i) << endl;
+    }
+
+    cout << "Clauses: " << endl;
+
+    for (int i = 0; i< this->clauses.size(); i++) {
+        Clause& clause = ca[clauses[i]];
+
+        cout << "clause i: ";
+
+        for (int l = 0; l < clause.size(); l++)
+            cout << clause[l] << " ";
+
+        cout << endl;
+    }
+
+    cout << endl;
+}
+
 void MaxSatSolver::solve_() {
     int vars = nVars();
     lastSoftLiteral = disjcores == NO ? INT_MAX : vars;
@@ -399,6 +431,7 @@ void MaxSatSolver::solve_() {
         
         cancelUntil(0);
         trace(maxsat, 2, "UNSAT! Conflict of size " << conflict.size());
+        this->dump();
         trace(maxsat, 100, "Conflict: " << conflict);
         
         if(conflict.size() == 0) return;
@@ -414,6 +447,7 @@ void MaxSatSolver::solve_() {
 
         assert(conflict.size() > 0);
         trace(maxsat, 4, "Analyze conflict of size " << conflict.size() << " and weight " << limit);
+
         if(conflict.size() == 1) weights[var(conflict.last())] = 0;
         else (this->*corestrat)(limit);
     }

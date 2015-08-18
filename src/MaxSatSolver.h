@@ -37,6 +37,8 @@ public:
     virtual lbool solve(int) { return solve(); }
     
     void onTick();
+
+    void dump();
     
     
 private:
