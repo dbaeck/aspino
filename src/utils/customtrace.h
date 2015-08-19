@@ -46,4 +46,8 @@ std::string set_color(Color foreground = NONE, Color background = NONE);
         std::cout << set_color(GREEN) << "[" << #type << "]" << std::string(level, ' ') << msg << set_color() << std::endl;\
     }
 
+#define dbg(msg) \
+    cout << set_color(RED) << "[DEBUG] " << msg << set_color() << std::endl;
+#else
+
 #endif
