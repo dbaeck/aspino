@@ -76,6 +76,45 @@ void sort(vec<T>& v) {
     if(v.size() > 1) quickSort(v, 0, v.size()-1);
 }
 
+
+    template <class T>
+    void split(vec<T> &literals, vec<T> &right, vec<T> &left)
+    {
+        int pivot = (int)ceil(literals.size() / 2);
+
+        for (int i = 0; i< pivot; i++)
+            left.push(literals[i]);
+        for (int i = pivot; i < literals.size(); i++)
+            right.push(literals[i]);
+    }
+
+    template <class T>
+    void merge(vec<T> &left, vec<T> &right, vec<T> &out)
+    {
+        left.copyTo(out);
+        for(int i = 0; i < right.size(); i++)
+            out.push(right[i]);
+    }
+
+    template <class T>
+    void contains(vec<T> &collection, T elem)
+    {
+        for(int i = 0; i < collection.size(); i++)
+            if(collection[i] == elem)
+                return true;
+        return false;
+    }
+
+    template <class T>
+    void removeAll(vec<T> &collection, vec<T> &toRemove, vec<T> &out)
+    {
+        out.clear();
+        for(int i = 0; i < collection.size(); i++)
+            if(!contains(toRemove, collection[i]))
+                out.push(collection[i]);
+    }
+
+
 } // namespace aspino
 
 #endif
