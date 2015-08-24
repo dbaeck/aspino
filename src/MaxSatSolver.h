@@ -20,6 +20,9 @@
 
 #include "PseudoBooleanSolver.h"
 
+#include <iostream>
+#include <utility>
+
 namespace aspino {
 
 class MaxSatSolver : public PseudoBooleanSolver {
@@ -38,7 +41,7 @@ public:
     
     void onTick();
 
-    void dump();
+    void dump(std::string msg = "");
     
     
 private:
@@ -71,12 +74,17 @@ private:
     void updateUpperBound();
     
     void progressionBinaryFind(int64_t limit);
-    
+
+        //MergeXPlain
+        void findConflicts(vec<Lit> &, vec<Lit> &, vec<Lit> &, vec<Lit> &);
+        void getConflict(vec<Lit> &, vec<Lit> &, vec<Lit> &, vec<Lit> &);
+
     void trim();
     void progressionMinimize(int64_t limit);
     void biprogressionMinimize(int64_t limit);
     void binaryMinimize(int64_t limit);
     void progressionBinaryMinimize(int64_t limit);
+        void mergexplainMinimize();
     void minimize();
     
     void (MaxSatSolver::*corestrat)(int64_t);
