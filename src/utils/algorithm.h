@@ -97,7 +97,7 @@ void sort(vec<T>& v) {
     }
 
     template <class T>
-    void contains(vec<T> &collection, T elem)
+    bool contains(vec<T> &collection, T elem)
     {
         for(int i = 0; i < collection.size(); i++)
             if(collection[i] == elem)
