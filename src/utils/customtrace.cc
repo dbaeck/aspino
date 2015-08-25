@@ -2,6 +2,11 @@
 #include <iostream>
 
 std::string set_color(Color foreground, Color background) {
+
+    #ifndef COLOR_TRACE
+        return "";
+    #endif
+
     char num_s[3];
     std::string s = "\033[";
 

@@ -18,6 +18,8 @@
 #ifndef __customtrace_h__
 #define __customtrace_h__
 
+#define COLOR_TRACE
+
 #include <cstdio>
 #include <string>
 #include <iostream>
