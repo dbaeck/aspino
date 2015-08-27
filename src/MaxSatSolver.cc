@@ -382,9 +382,10 @@ namespace aspino {
     void MaxSatSolver::getConflict(vec<Lit> &b, vec<Lit> &d, vec<Lit> &c, vec<Lit> &out) {
 
         out.clear();
-        if (d.size() != 0)          // && !is_consitent
+        if (d.size() != 0 && !isConsistent(b)) {
             // return empty set
             return;
+        }
 
         if (c.size() == 1) {
             // return C
@@ -409,31 +410,70 @@ namespace aspino {
         aspino::merge(d1, d2, out);
     }
 
-    void MaxSatSolver::findConflicts(vec<Lit> &b, vec<Lit> &c, vec<Lit> &cprime, vec<Lit> &conflicts) {
+    bool MaxSatSolver::isConsistent(vec<Lit> &toCheck) {
+
+        uint64_t budget = conflicts - lastConflict;
+
+        lvec oldAssumptions;
+        assumptions.moveTo(oldAssumptions);
+        toCheck.moveTo(assumptions);
+
+        float sumLBD_ = sumLBD;
+        uint64_t conflictsRestarts_ = conflictsRestarts;
+        sumLBD = 0;
+        conflictsRestarts = 0;
+        setConfBudget(budget);
+        PseudoBooleanSolver::solve();
+        budgetOff();
+        sumLBD += sumLBD_;
+        conflictsRestarts += conflictsRestarts_;
+
+        oldAssumptions.moveTo(assumptions);
+
+        return (status == l_Undef);
+    }
+
+    std::vector<std::vector<Lit> > MaxSatSolver::findConflicts(vec<Lit> &b, vec<Lit> &c, vec<Lit> &cprime) {
+
+        std::vector<std::vector<Lit> > conflicts;
 
         //isConsistent (B u C)?
+        lvec bc;
+        aspino::merge(b, c, bc);
+        if(isConsistent(bc)) {
+            //return < C, EmptySet >
+            c.copyTo(cprime);
+            return conflicts;
+        }
 
         //|C| = 1
         if (c.size() == 1) {
+            // return < EmptySet, { C } >
             cprime.clear();
-            c.copyTo(conflicts);
+            conflicts.push_back(stdCast(c));
             dbg(c);
-            return;
+            return conflicts;
         }
 
-        lvec c1, c2, c1prime, c2prime, conflicts1, conflicts2, merged, x, cs, bc2, bx, aux1;
+        lvec c1, c2, c1prime, c2prime, merged, x, cs, bc2, bx, aux1;
+        std::vector<std::vector<Lit> > conflicts1, conflicts2;
 
         //Split C into disjoint sets
         aspino::split(c, c1, c2);
 
         //Find Conflicts in subsets
-        findConflicts(b, c1, c1prime, conflicts1);
-        findConflicts(b, c2, c2prime, conflicts2);
+        conflicts1 = findConflicts(b, c1, c1prime);
+        conflicts2 = findConflicts(b, c2, c2prime);
 
         aspino::merge(c1prime, c2prime, merged);
+        aspino::merge(merged, b, merged);
 
-        //while merged is not consistent
-        //while()
+        //Line 10
+        conflicts = conflicts1;
+        conflicts.insert(conflicts.end(), conflicts2.begin(), conflicts2.end());
+
+        //while (C1' u C2' u B) is not consistent
+        while(!isConsistent(merged))
         {
             //X = GetConflict
             aspino::merge(b, c2prime, bc2);
@@ -449,9 +489,12 @@ namespace aspino {
             aux1.moveTo(c1prime);
 
             //add conflict sets
-
+            conflicts.push_back(stdCast(cs));
         }
 
+        //return <C1' u C2', conflicts >
+        aspino::merge(c1prime, c2prime, cprime);
+        return conflicts;
     }
 
 
@@ -699,8 +742,10 @@ namespace aspino {
     }
 
     void MaxSatSolver::mergexplainMinimize() {
+        dbg("mergeXplain");
         assert(decisionLevel() == 0);
-        if (conflict.size() <= 1) return;
+        // disabled for now, such that we enter MXP also for the |c| = 1 case
+        //if (conflict.size() <= 1) return;
 
         double cpuTime = Glucose::cpuTime() - lastCallCpuTime;
         uint64_t budget = conflicts - lastConflict;
@@ -710,7 +755,9 @@ namespace aspino {
               "Minimize core of size " << conflict.size() << " (" << (conflicts - lastConflict) << " conflicts; " <<
               cpuTime << " seconds; each check with budget " << budget << ")");
         trim();
-        if (budget == 0) return;
+
+        //disabled for now, |c| = 1 case
+        //if (budget == 0) return;
 
         vec<Lit> core;
         conflict.moveTo(core);
@@ -721,9 +768,28 @@ namespace aspino {
         this->dump("MergeXplain Minimize");
         dbg(core);
 
+        //MergeXPlain
+        //If !isConsistent(B) - for the moment, we have no B
+        //If isConsistent(B u C) - already handled at this point
 
+        lvec b, cp; //cp is cprime at end, not relevant
 
-        core.moveTo(conflict);
+        std::vector<std::vector<Lit> > conflicts = findConflicts(b, core, cp);
+
+        dbg(conflicts.size());
+
+        //MXP found conflicts, use the first found minimal core for the moment
+        if(conflicts.size() >= 1) {
+            std::vector<Lit> cf = conflicts[0];
+            lvec cfg;
+            vecCast(cf, cfg);
+            cancelUntil(0);
+            cfg.moveTo(conflict);
+        }
+        else {
+            cancelUntil(0);
+            core.moveTo(conflict);
+        }
     }
 
     void MaxSatSolver::progressionMinimize(int64_t limit) {

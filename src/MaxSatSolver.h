@@ -76,8 +76,9 @@ private:
     void progressionBinaryFind(int64_t limit);
 
         //MergeXPlain
-        void findConflicts(vec<Lit> &, vec<Lit> &, vec<Lit> &, vec<Lit> &);
+        std::vector<std::vector<Lit> > findConflicts(vec<Lit> &, vec<Lit> &, vec<Lit> &);
         void getConflict(vec<Lit> &, vec<Lit> &, vec<Lit> &, vec<Lit> &);
+        bool isConsistent(vec<Lit> &);
 
     void trim();
     void progressionMinimize(int64_t limit);

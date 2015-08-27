@@ -114,6 +114,22 @@ void sort(vec<T>& v) {
                 out.push(collection[i]);
     }
 
+    template <class T>
+    std::vector<T> stdCast(vec<T> &collection)
+    {
+        std::vector<T> out;
+        for(int i = 0; i < collection.size(); i++)
+            out.push_back(collection[i]);
+        return out;
+    }
+
+    template <class T>
+    void vecCast(std::vector<T> collection, vec<T> &out)
+    {
+        out.clear();
+        for(int i = 0; i < collection.size(); i++)
+            out.push(collection[i]);
+    }
 
 } // namespace aspino
 
