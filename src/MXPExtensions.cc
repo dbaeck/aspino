@@ -4,6 +4,8 @@
 
 #include "MaxSatSolver.h"
 #include "utils/algorithm.h"
+#include <utils/System.h>
+#include <utility>
 
 namespace aspino {
 
@@ -124,5 +126,56 @@ namespace aspino {
         return conflicts;
     }
 
+
+    void MaxSatSolver::mergexplainMinimize() {
+        dbg("mergeXplain");
+        assert(decisionLevel() == 0);
+        // disabled for now, such that we enter MXP also for the |c| = 1 case
+        //if (conflict.size() <= 1) return;
+
+        double cpuTime = Glucose::cpuTime() - lastCallCpuTime;
+        uint64_t budget = conflicts - lastConflict;
+        uint64_t budgetMin = budget / cpuTime;
+        if (budget > budget * 30 / cpuTime) budget = budget * 30 / cpuTime;
+        trace(maxsat, 10,
+              "Minimize core of size " << conflict.size() << " (" << (conflicts - lastConflict) << " conflicts; " <<
+              cpuTime << " seconds; each check with budget " << budget << ")");
+        trim();
+
+        //disabled for now, |c| = 1 case
+        //if (budget == 0) return;
+
+        vec<Lit> core;
+        conflict.moveTo(core);
+
+        vec<Lit> allAssumptions;
+        for (int i = 0; i < core.size(); i++) allAssumptions.push(~core[i]);
+
+        this->dump("MergeXplain Minimize");
+        dbg(core);
+
+        //MergeXPlain
+        //If !isConsistent(B) - for the moment, we have no B
+        //If isConsistent(B u C) - already handled at this point
+
+        lvec b, cp; //cp is cprime at end, not relevant
+
+        std::vector<std::vector<Lit> > conflicts = findConflicts(b, core, cp);
+
+        dbg(conflicts.size());
+
+        //MXP found conflicts, use the first found minimal core for the moment
+        if(conflicts.size() >= 1) {
+            std::vector<Lit> cf = conflicts[0];
+            lvec cfg;
+            vecCast(cf, cfg);
+            cancelUntil(0);
+            cfg.moveTo(conflict);
+        }
+        else {
+            cancelUntil(0);
+            core.moveTo(conflict);
+        }
+    }
 
 }
