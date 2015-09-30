@@ -25,6 +25,8 @@
 
 namespace aspino {
 
+    typedef Glucose::vec<Glucose::Lit> lvec;
+
 class MaxSatSolver : public PseudoBooleanSolver {
 public:
     MaxSatSolver();
