@@ -1,0 +1,78 @@
+c ub 160
+conflict detected
+o 1
+conflict size before: 4
+conflict detected
+o 2
+conflict size before: 6
+c ub 136
+conflict size after: 6 :: 0ms
+conflict detected
+o 3
+conflict size before: 9
+conflict detected
+o 4
+conflict size before: 6
+conflict detected
+o 5
+conflict size before: 8
+c ub 56
+conflict size after: 8 :: 0ms
+conflict detected
+o 6
+conflict size before: 9
+conflict detected
+o 7
+conflict size before: 11
+conflict size after: 11 :: 0ms
+conflict detected
+o 8
+conflict size before: 10
+conflict size after: 10 :: 0ms
+conflict detected
+o 9
+conflict size before: 7
+conflict detected
+o 10
+conflict size before: 6
+conflict detected
+o 11
+conflict size before: 11
+conflict size after: 11 :: 1ms
+conflict detected
+o 12
+conflict size before: 12
+conflict size after: 12 :: 1ms
+conflict detected
+o 13
+conflict size before: 13
+conflict size after: 13 :: 2ms
+conflict detected
+o 14
+conflict size before: 17
+conflict size after: 17 :: 0ms
+conflict detected
+o 15
+conflict size before: 14
+c ub 55
+conflict size after: 14 :: 1ms
+conflict detected
+o 16
+conflict size before: 32
+c ub 36
+c ub 35
+c ub 33
+conflict size after: 22 :: 2ms
+conflict detected
+o 17
+conflict size before: 43
+c ub 27
+c ub 25
+c ub 24
+c ub 22
+conflict size after: 41 :: 1ms
+c ub 17
+o 17
+s OPTIMUM FOUND
+v -1 -2 -3 -4 -5 -6 -7 -8 9 10 11 -12 13 14 -15 -16 17 -18 -19 -20 -21 -22 -23 -24 25 26 27
+Total time: 19ms

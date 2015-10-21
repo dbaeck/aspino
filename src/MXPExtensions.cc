@@ -127,7 +127,7 @@ namespace aspino {
     }
 
 
-    void MaxSatSolver::mergexplainMinimize() {
+    void MaxSatSolver::mergexplainMinimize(int64_t limit) {
         dbg("mergeXplain");
         assert(decisionLevel() == 0);
         // disabled for now, such that we enter MXP also for the |c| = 1 case

@@ -89,6 +89,17 @@ void sort(vec<T>& v) {
     }
 
     template <class T>
+    void split(std::vector<T> literals, std::vector<T> &right, std::vector<T> &left)
+    {
+        int pivot = (int)ceil(literals.size() / 2);
+
+        for (int i = 0; i< pivot; i++)
+            left.push_back(literals[i]);
+        for (int i = pivot; i < literals.size(); i++)
+            right.push_back(literals[i]);
+    }
+
+    template <class T>
     void merge(vec<T> &left, vec<T> &right, vec<T> &out)
     {
         left.copyTo(out);
@@ -97,7 +108,25 @@ void sort(vec<T>& v) {
     }
 
     template <class T>
+    std::vector<T> merge(std::vector<T> left, std::vector<T> right)
+    {
+        std::vector<T> out;
+        out.insert(out.end(), left.begin(), left.end());
+        out.insert(out.end(), right.begin(), right.end());
+        return out;
+    }
+
+    template <class T>
     bool contains(vec<T> &collection, T elem)
+    {
+        for(int i = 0; i < collection.size(); i++)
+            if(collection[i] == elem)
+                return true;
+        return false;
+    }
+
+    template <class T>
+    bool contains(std::vector<T> &collection, T elem)
     {
         for(int i = 0; i < collection.size(); i++)
             if(collection[i] == elem)
@@ -112,6 +141,16 @@ void sort(vec<T>& v) {
         for(int i = 0; i < collection.size(); i++)
             if(!contains(toRemove, collection[i]))
                 out.push(collection[i]);
+    }
+
+    template <class T>
+    std::vector<T> removeAll(std::vector<T> collection, std::vector<T> toRemove)
+    {
+        std::vector<T> out;
+        for(int i = 0; i < collection.size(); i++)
+            if(!contains(toRemove, collection[i]))
+                out.push_back(collection[i]);
+        return out;
     }
 
     template <class T>

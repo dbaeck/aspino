@@ -38,7 +38,17 @@ Glucose::BoolOption option_maxsat_printmodel("MAXSAT", "maxsat-print-model", "Pr
 Glucose::IntOption option_maxsat_tag("MAXSAT", "maxsat-tag", "Parameter for maxsat-strat.", 16,
                                      Glucose::IntRange(2, INT32_MAX));
 
+#include <sys/time.h>
+
 namespace aspino {
+
+    long currentTime()
+    {
+        struct timeval tp;
+        gettimeofday(&tp, NULL);
+        long int ms = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+        return ms;
+    }
 
 //#include <signal.h>
 //static MaxSatSolver* solver;
@@ -93,6 +103,9 @@ namespace aspino {
         else if (strcmp(option_maxsat_disjcores, "all") == 0) disjcores = ALL;
         else
             assert(0);
+
+        minStrat = &MaxSatSolver::progressionMinimize;
+        minStrat = &MaxSatSolver::mergexplainMinimizeStd;
 
         setIncrementalMode();
     }
@@ -374,7 +387,7 @@ namespace aspino {
 
         cout << "o " << lowerbound << endl;
         cout << "s OPTIMUM FOUND" << endl;
-        this->dump();
+//        this->dump();
         if (option_maxsat_printmodel) printModel();
         return l_True;
     }
@@ -436,15 +449,18 @@ namespace aspino {
             cancelUntil(0);
             trace(maxsat, 2, "UNSAT! Conflict of size " << conflict.size());
             trace(maxsat, 100, "Conflict: " << conflict);
-            this->dump("solve_ conflict case");
+            cout << "conflict detected" << endl;
+            //this->dump("solve_ conflict case");
 
             if (conflict.size() == 0) return;
 
             updateLowerBound(limit);
 
             assert(decisionLevel() == 0);
+            (this->*minStrat)(limit);
             //progressionMinimize(limit);
-            mergexplainMinimize();
+//            mergexplainMinimizeStd(limit);
+            //mergexplainMinimize(limit);
 //        biprogressionMinimize(limit);
 //        binaryMinimize(limit);
 //        progressionBinaryMinimize(limit);
@@ -625,9 +641,11 @@ namespace aspino {
     }
 
     void MaxSatSolver::progressionMinimize(int64_t limit) {
+        cout << "conflict size before: " << conflict.size() << endl;
+
         assert(decisionLevel() == 0);
         if (conflict.size() <= 1) return;
-
+        long starttime = aspino::currentTime();
         double cpuTime = Glucose::cpuTime() - lastCallCpuTime;
         uint64_t budget = conflicts - lastConflict;
         uint64_t budgetMin = budget / cpuTime;
@@ -644,7 +662,7 @@ namespace aspino {
         vec<Lit> allAssumptions;
         for (int i = 0; i < core.size(); i++) allAssumptions.push(~core[i]);
 
-        this->dump("Progression Minimize");
+        //this->dump("Progression Minimize");
         dbg(core);
 
         assumptions.clear();
@@ -717,7 +735,10 @@ namespace aspino {
             }
             cancelUntil(0);
         }
+
+        long endtime = aspino::currentTime();
         core.moveTo(conflict);
+        cout << "conflict size after: " << conflict.size() << " :: " << endtime - starttime << "ms" << endl;
     }
 
     void MaxSatSolver::biprogressionMinimize(int64_t limit) {

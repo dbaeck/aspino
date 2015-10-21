@@ -26,6 +26,7 @@
 namespace aspino {
 
     typedef Glucose::vec<Glucose::Lit> lvec;
+    typedef std::vector<Glucose::Lit> slvec;
 
 class MaxSatSolver : public PseudoBooleanSolver {
 public:
@@ -82,12 +83,20 @@ private:
         void getConflict(vec<Lit> &, vec<Lit> &, vec<Lit> &, vec<Lit> &);
         bool isConsistent(vec<Lit> &);
 
+        //MergeXPlain stdvec
+        std::vector<slvec > findConflicts(slvec, slvec, slvec);
+        slvec getConflict(slvec, slvec, slvec);
+        bool isConsistent(slvec);
+
+        void (MaxSatSolver::*minStrat)(int64_t);
+
     void trim();
     void progressionMinimize(int64_t limit);
     void biprogressionMinimize(int64_t limit);
     void binaryMinimize(int64_t limit);
     void progressionBinaryMinimize(int64_t limit);
-        void mergexplainMinimize();
+        void mergexplainMinimize(int64_t limit);
+        void mergexplainMinimizeStd(int64_t limit);
     void minimize();
     
     void (MaxSatSolver::*corestrat)(int64_t);

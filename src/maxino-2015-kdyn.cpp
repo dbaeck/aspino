@@ -22,6 +22,7 @@
 #include "MaxSatSolver.h"
 #include "AspSolver.h"
 #include "utils/trace.h"
+#include "utils/algorithm.h"
 
 #include <utils/Options.h>
 
@@ -47,8 +48,21 @@ static aspino::AbstractSolver* solver;
 
 static void SIGINT_interrupt(int) { solver->interrupt(); }
 
+#include<sys/time.h>
+
+long currentTime()
+{
+    struct timeval tp;
+    gettimeofday(&tp, NULL);
+    long int ms = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+    return ms;
+}
+
+
 int main(int argc, char** argv)
 {
+    long starttime = currentTime();
+
     signal(SIGINT, SIGINT_interrupt);
     signal(SIGTERM, SIGINT_interrupt);
 
@@ -89,13 +103,40 @@ int main(int argc, char** argv)
     solver->parse(in);
     gzclose(in);
 
+//    std::vector<int> a, b, c, d, e;
+//    a.push_back(1);
+//    a.push_back(2);
+//    b.push_back(4);
+//    b.push_back(3);
+//    c = aspino::merge(a, b);
+//
+//    aspino::split(c, d, e);
+//
+//
+//    for (std::vector<int>::const_iterator i = c.begin(); i != c.end(); ++i)
+//        std::cout << *i << ' ';
+//
+//    cout << endl;
+//
+//    for (std::vector<int>::const_iterator i = d.begin(); i != d.end(); ++i)
+//        std::cout << *i << ' ';
+//
+//    cout << endl;
+//
+//    for (std::vector<int>::const_iterator i = e.begin(); i != e.end(); ++i)
+//        std::cout << *i << ' ';
+//
+//    exit(0);
+
     solver->eliminate(true);
     if(!solver->okay()) {
         cout << "UNSATISFIABLE" << endl;
+        cout << "Total time: " << currentTime() - starttime << endl;
         solver->exit(20);
     }
     
     lbool ret = solver->solve(option_n);
+    cout << "Total time: " << currentTime() - starttime << "ms" << endl;
     
 #ifndef SAFE_EXIT
     solver->exit(ret == l_True ? 10 : ret == l_False ? 20 : 0);     // (faster than "return", which will invoke the destructor for 'Solver')

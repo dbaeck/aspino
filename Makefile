@@ -3,13 +3,13 @@ BUILD = debug
 
 ########## Available targets
 
-cxxflags.debug =    -DTRACE_ON -DCUSTOM_TRACE -DSAFE_EXIT -g
+cxxflags.debug =    -DTRACE_ON -DCUSTOM_TRACE -DSAFE_EXIT -I/usr/local/include/ -g
 linkflags.debug =   -g
 
 cxxflags.trace =    -DNDEBUG -DTRACE_ON -O3
 linkflags.trace =
 
-cxxflags.release =  -DNDEBUG -O3
+cxxflags.release =  -DNDEBUG -O3 -DEVAL
 linkflags.release =
 
 cxxflags.gprof =    -DNDEBUG -DSAFE_EXIT -O3 -g -pg

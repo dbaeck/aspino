@@ -18,9 +18,18 @@
 #ifndef __trace_h__
 #define __trace_h__
 
+#ifndef TEST_TEST
+#define dbg(msg)
+#define set_color(col) ""
+#define trace(type, level, msg)
+#else
+
 #ifdef CUSTOM_TRACE
     #include "customtrace.h"
 #else
+
+    #define dbg(msg)
+    #define set_color(col) ""
 
 #ifndef TRACE_ON
     #define trace(type, level, msg)
@@ -46,5 +55,6 @@ extern Glucose::IntOption option_trace_asp_pre;
 
 #endif
 
+#endif
 #endif
 #endif

@@ -48,8 +48,19 @@ static aspino::AbstractSolver* solver;
 
 static void SIGINT_interrupt(int) { solver->interrupt(); }
 
+#include<sys/time.h>
+
+long currentTime()
+{
+    struct timeval tp;
+    gettimeofday(&tp, NULL);
+    long int ms = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+    return ms;
+}
+
 int main(int argc, char** argv)
 {
+    long starttime = currentTime();
     signal(SIGINT, SIGINT_interrupt);
     signal(SIGTERM, SIGINT_interrupt);
 
@@ -93,11 +104,14 @@ int main(int argc, char** argv)
 
     solver->eliminate(true);
     if(!solver->okay()) {
+        cout << "Total time: " << currentTime() - starttime << endl;
         cout << "UNSATISFIABLE" << endl;
         solver->exit(20);
     }
     
     lbool ret = solver->solve(option_n);
+
+    cout << "Total time: " << currentTime() - starttime << endl;
     
 #ifndef SAFE_EXIT
     solver->exit(ret == l_True ? 10 : ret == l_False ? 20 : 0);     // (faster than "return", which will invoke the destructor for 'Solver')
