@@ -65,105 +65,40 @@ namespace aspino {
 //    }
 //}
 
-<<<<<<< HEAD
+
     template<class B>
-    static int64_t parseLong(B &in) {
-        int64_t val = 0;
-        bool neg = false;
+    int64_t parseLong(B& in) {
+        int64_t    val = 0;
+        bool    neg = false;
         skipWhitespace(in);
-        if (*in == '-') neg = true, ++in;
+        if      (*in == '-') neg = true, ++in;
         else if (*in == '+') ++in;
         if (*in < '0' || *in > '9') fprintf(stderr, "PARSE ERROR! Unexpected char: %c\n", *in), exit(3);
         while (*in >= '0' && *in <= '9')
-            val = val * 10 + (*in - '0'),
+            val = val*10 + (*in - '0'),
                     ++in;
-        return neg ? -val : val;
-=======
-template<class B>
-int64_t parseLong(B& in) {
-    int64_t    val = 0;
-    bool    neg = false;
-    skipWhitespace(in);
-    if      (*in == '-') neg = true, ++in;
-    else if (*in == '+') ++in;
-    if (*in < '0' || *in > '9') fprintf(stderr, "PARSE ERROR! Unexpected char: %c\n", *in), exit(3);
-    while (*in >= '0' && *in <= '9')
-        val = val*10 + (*in - '0'),
-        ++in;
-    return neg ? -val : val; }
-
-    
-MaxSatSolver::MaxSatSolver() : lowerbound(0), lastConflict(0), lastPropagation(0), lastCallCpuTime(0.0) /*, timeBudget(0.0)*/ {
-    if(strcmp(option_maxsat_strat, "one") == 0) corestrat = &MaxSatSolver::corestrat_one;
-    else if(strcmp(option_maxsat_strat, "one-2") == 0) corestrat = &MaxSatSolver::corestrat_one_2;
-    else if(strcmp(option_maxsat_strat, "one-neg") == 0) corestrat = &MaxSatSolver::corestrat_one_neg;
-    else if(strcmp(option_maxsat_strat, "one-wc") == 0) corestrat = &MaxSatSolver::corestrat_one_wc;
-    else if(strcmp(option_maxsat_strat, "one-neg-wc") == 0) corestrat = &MaxSatSolver::corestrat_one_neg_wc;
-    else if(strcmp(option_maxsat_strat, "one-pmres") == 0) corestrat = &MaxSatSolver::corestrat_one_pmres;
-    else if(strcmp(option_maxsat_strat, "one-pmres-2") == 0) corestrat = &MaxSatSolver::corestrat_one_pmres_2;
-    else if(strcmp(option_maxsat_strat, "pmres") == 0) corestrat = &MaxSatSolver::corestrat_pmres;
-    else if(strcmp(option_maxsat_strat, "pmres-reverse") == 0) corestrat = &MaxSatSolver::corestrat_pmres_reverse;
-    else if(strcmp(option_maxsat_strat, "pmres-split-conj") == 0) corestrat = &MaxSatSolver::corestrat_pmres_split_conj;
-    else if(strcmp(option_maxsat_strat, "pmres-log") == 0) corestrat = &MaxSatSolver::corestrat_pmreslog;
-    else if(strcmp(option_maxsat_strat, "kdyn") == 0) corestrat = &MaxSatSolver::corestrat_kdyn;
-    else assert(0);
-    
-    if(strcmp(option_maxsat_disjcores, "no") == 0) disjcores = NO;
-    else if(strcmp(option_maxsat_disjcores, "pre") == 0) disjcores = PRE;
-    else if(strcmp(option_maxsat_disjcores, "all") == 0) disjcores = ALL;
-    else assert(0);
-    
-    setIncrementalMode();
-}
-
-MaxSatSolver::~MaxSatSolver() {
-}
-
-void MaxSatSolver::sameSoftVar(Lit soft, int64_t weight) {
-    assert(weights[var(soft)] != 0);
-    assert(decisionLevel() == 0);
-    int pos = 0;
-    for(int i = 0; i < softLiterals.size(); i++, pos++) if(var(softLiterals[i]) == var(soft)) break;
-    assert(pos < softLiterals.size());
-    
-    if(softLiterals[pos] == soft) {
-        weights[var(soft)] += weight;
-        return;
-    }
-        
-    if(weights[var(soft)] == weight) {
-        updateLowerBound(weight);
-        setFrozen(var(soft), false);
-        softLiterals[pos] = softLiterals[softLiterals.size()-1];
-        softLiterals.shrink_(1);
-        weights[var(soft)] = 0;
->>>>>>> cb3bfe5f6925ecb680c62169a3a56269b468ea77
-    }
+        return neg ? -val : val; }
 
 
-    MaxSatSolver::MaxSatSolver() : lowerbound(0), lastConflict(0), lastPropagation(0),
-                                   lastCallCpuTime(0.0) /*, timeBudget(0.0)*/ {
-        if (strcmp(option_maxsat_strat, "one") == 0) corestrat = &MaxSatSolver::corestrat_one;
-        else if (strcmp(option_maxsat_strat, "one-2") == 0) corestrat = &MaxSatSolver::corestrat_one_2;
-        else if (strcmp(option_maxsat_strat, "one-neg") == 0) corestrat = &MaxSatSolver::corestrat_one_neg;
-        else if (strcmp(option_maxsat_strat, "one-wc") == 0) corestrat = &MaxSatSolver::corestrat_one_wc;
-        else if (strcmp(option_maxsat_strat, "one-neg-wc") == 0) corestrat = &MaxSatSolver::corestrat_one_neg_wc;
-        else if (strcmp(option_maxsat_strat, "one-pmres") == 0) corestrat = &MaxSatSolver::corestrat_one_pmres;
-        else if (strcmp(option_maxsat_strat, "one-pmres-2") == 0) corestrat = &MaxSatSolver::corestrat_one_pmres_2;
-        else if (strcmp(option_maxsat_strat, "pmres") == 0) corestrat = &MaxSatSolver::corestrat_pmres;
-        else if (strcmp(option_maxsat_strat, "pmres-reverse") == 0) corestrat = &MaxSatSolver::corestrat_pmres_reverse;
-        else if (strcmp(option_maxsat_strat, "pmres-split-conj") == 0)
-            corestrat = &MaxSatSolver::corestrat_pmres_split_conj;
-        else if (strcmp(option_maxsat_strat, "pmres-log") == 0) corestrat = &MaxSatSolver::corestrat_pmreslog;
-        else if (strcmp(option_maxsat_strat, "kdyn") == 0) corestrat = &MaxSatSolver::corestrat_kdyn;
-        else
-            assert(0);
+    MaxSatSolver::MaxSatSolver() : lowerbound(0), lastConflict(0), lastPropagation(0), lastCallCpuTime(0.0) /*, timeBudget(0.0)*/ {
+        if(strcmp(option_maxsat_strat, "one") == 0) corestrat = &MaxSatSolver::corestrat_one;
+        else if(strcmp(option_maxsat_strat, "one-2") == 0) corestrat = &MaxSatSolver::corestrat_one_2;
+        else if(strcmp(option_maxsat_strat, "one-neg") == 0) corestrat = &MaxSatSolver::corestrat_one_neg;
+        else if(strcmp(option_maxsat_strat, "one-wc") == 0) corestrat = &MaxSatSolver::corestrat_one_wc;
+        else if(strcmp(option_maxsat_strat, "one-neg-wc") == 0) corestrat = &MaxSatSolver::corestrat_one_neg_wc;
+        else if(strcmp(option_maxsat_strat, "one-pmres") == 0) corestrat = &MaxSatSolver::corestrat_one_pmres;
+        else if(strcmp(option_maxsat_strat, "one-pmres-2") == 0) corestrat = &MaxSatSolver::corestrat_one_pmres_2;
+        else if(strcmp(option_maxsat_strat, "pmres") == 0) corestrat = &MaxSatSolver::corestrat_pmres;
+        else if(strcmp(option_maxsat_strat, "pmres-reverse") == 0) corestrat = &MaxSatSolver::corestrat_pmres_reverse;
+        else if(strcmp(option_maxsat_strat, "pmres-split-conj") == 0) corestrat = &MaxSatSolver::corestrat_pmres_split_conj;
+        else if(strcmp(option_maxsat_strat, "pmres-log") == 0) corestrat = &MaxSatSolver::corestrat_pmreslog;
+        else if(strcmp(option_maxsat_strat, "kdyn") == 0) corestrat = &MaxSatSolver::corestrat_kdyn;
+        else assert(0);
 
-        if (strcmp(option_maxsat_disjcores, "no") == 0) disjcores = NO;
-        else if (strcmp(option_maxsat_disjcores, "pre") == 0) disjcores = PRE;
-        else if (strcmp(option_maxsat_disjcores, "all") == 0) disjcores = ALL;
-        else
-            assert(0);
+        if(strcmp(option_maxsat_disjcores, "no") == 0) disjcores = NO;
+        else if(strcmp(option_maxsat_disjcores, "pre") == 0) disjcores = PRE;
+        else if(strcmp(option_maxsat_disjcores, "all") == 0) disjcores = ALL;
+        else assert(0);
 
         minStrat = &MaxSatSolver::progressionMinimize;
         minStrat = &MaxSatSolver::mergexplainMinimizeStd;
@@ -178,22 +113,22 @@ void MaxSatSolver::sameSoftVar(Lit soft, int64_t weight) {
         assert(weights[var(soft)] != 0);
         assert(decisionLevel() == 0);
         int pos = 0;
-        for (int i = 0; i < softLiterals.size(); i++, pos++) if (var(softLiterals[i]) == var(soft)) break;
+        for(int i = 0; i < softLiterals.size(); i++, pos++) if(var(softLiterals[i]) == var(soft)) break;
         assert(pos < softLiterals.size());
 
-        if (softLiterals[pos] == soft) {
+        if(softLiterals[pos] == soft) {
             weights[var(soft)] += weight;
             return;
         }
 
-        if (weights[var(soft)] == weight) {
+        if(weights[var(soft)] == weight) {
             updateLowerBound(weight);
             setFrozen(var(soft), false);
-            softLiterals[pos] = softLiterals[softLiterals.size() - 1];
+            softLiterals[pos] = softLiterals[softLiterals.size()-1];
             softLiterals.shrink_(1);
             weights[var(soft)] = 0;
         }
-        else if (weights[var(soft)] < weight) {
+        else if(weights[var(soft)] < weight) {
             updateLowerBound(weights[var(soft)]);
             softLiterals[pos] = soft;
             weights[var(soft)] = weight - weights[var(soft)];
