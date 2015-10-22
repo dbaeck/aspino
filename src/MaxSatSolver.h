@@ -25,9 +25,15 @@
 
 namespace aspino {
 
+<<<<<<< HEAD
     typedef Glucose::vec<Glucose::Lit> lvec;
     typedef std::vector<Glucose::Lit> slvec;
 
+=======
+template<class B>
+int64_t parseLong(B& in);
+    
+>>>>>>> cb3bfe5f6925ecb680c62169a3a56269b468ea77
 class MaxSatSolver : public PseudoBooleanSolver {
 public:
     MaxSatSolver();
