@@ -48,7 +48,17 @@ public:
     void onTick();
 
     void dump(std::string msg = "");
-    
+
+    void progressionMinimize(int64_t limit);
+    void mergexplainMinimize(int64_t limit);
+    void mergexplainMinimizeStd(int64_t limit);
+
+    void mxp(){
+
+        softLiterals.copyTo(conflict);
+        mergexplainMinimizeStd(INT_MAX);
+        exit(0);
+    };
     
 private:
     int64_t upperbound;
@@ -87,19 +97,18 @@ private:
         bool isConsistent(vec<Lit> &);
 
         //MergeXPlain stdvec
-        std::vector<slvec > findConflicts(slvec, slvec, slvec);
+        std::vector<slvec > findConflicts(slvec, slvec, slvec &, int, string, int);
         slvec getConflict(slvec, slvec, slvec);
         bool isConsistent(slvec);
 
         void (MaxSatSolver::*minStrat)(int64_t);
 
+        int runs;
+
     void trim();
-    void progressionMinimize(int64_t limit);
     void biprogressionMinimize(int64_t limit);
     void binaryMinimize(int64_t limit);
     void progressionBinaryMinimize(int64_t limit);
-        void mergexplainMinimize(int64_t limit);
-        void mergexplainMinimizeStd(int64_t limit);
     void minimize();
     
     void (MaxSatSolver::*corestrat)(int64_t);

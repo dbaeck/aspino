@@ -44,16 +44,16 @@ void reverse(vec<T>& v) {
 template <class T>
 void quickSort(vec<T>& arr, int left, int right) {
     int i = left, j = right;
-    int tmp;
+    T tmp;
     assert((left + right) / 2 >= 0);
     assert_msg((left + right) / 2 < arr.size(), "Accessing element " << (left + right) / 2 << " in array of size " << arr.size());
-    int pivot = arr[(left + right) / 2];
+    T pivot = arr[(left + right) / 2];
 
     /* partition */
     while (i <= j) {
         while (arr[i] < pivot)
               i++;
-        while (arr[j] > pivot)
+        while (pivot < arr[j])
               j--;
         if (i <= j) {
               tmp = arr[i];
@@ -78,7 +78,7 @@ void sort(vec<T>& v) {
 
 
     template <class T>
-    void split(vec<T> &literals, vec<T> &right, vec<T> &left)
+    void split(Glucose::vec<T> &literals, Glucose::vec<T> &right, Glucose::vec<T> &left)
     {
         int pivot = (int)ceil(literals.size() / 2);
 
@@ -94,13 +94,13 @@ void sort(vec<T>& v) {
         int pivot = (int)ceil(literals.size() / 2);
 
         for (int i = 0; i< pivot; i++)
-            left.push_back(literals[i]);
-        for (int i = pivot; i < literals.size(); i++)
             right.push_back(literals[i]);
+        for (int i = pivot; i < literals.size(); i++)
+            left.push_back(literals[i]);
     }
 
     template <class T>
-    void merge(vec<T> &left, vec<T> &right, vec<T> &out)
+    void merge(Glucose::vec<T> &left, Glucose::vec<T> &right, Glucose::vec<T> &out)
     {
         left.copyTo(out);
         for(int i = 0; i < right.size(); i++)
@@ -111,13 +111,13 @@ void sort(vec<T>& v) {
     std::vector<T> merge(std::vector<T> left, std::vector<T> right)
     {
         std::vector<T> out;
-        out.insert(out.end(), left.begin(), left.end());
         out.insert(out.end(), right.begin(), right.end());
+        out.insert(out.end(), left.begin(), left.end());
         return out;
     }
 
     template <class T>
-    bool contains(vec<T> &collection, T elem)
+    bool contains(Glucose::vec<T> &collection, T elem)
     {
         for(int i = 0; i < collection.size(); i++)
             if(collection[i] == elem)
@@ -135,7 +135,7 @@ void sort(vec<T>& v) {
     }
 
     template <class T>
-    void removeAll(vec<T> &collection, vec<T> &toRemove, vec<T> &out)
+    void removeAll(Glucose::vec<T> &collection, Glucose::vec<T> &toRemove, Glucose::vec<T> &out)
     {
         out.clear();
         for(int i = 0; i < collection.size(); i++)
@@ -154,7 +154,7 @@ void sort(vec<T>& v) {
     }
 
     template <class T>
-    std::vector<T> stdCast(vec<T> &collection)
+    std::vector<T> stdCast(Glucose::vec<T> &collection)
     {
         std::vector<T> out;
         for(int i = 0; i < collection.size(); i++)
@@ -163,7 +163,7 @@ void sort(vec<T>& v) {
     }
 
     template <class T>
-    void vecCast(std::vector<T> collection, vec<T> &out)
+    void vecCast(std::vector<T> collection, Glucose::vec<T> &out)
     {
         out.clear();
         for(int i = 0; i < collection.size(); i++)

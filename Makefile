@@ -9,7 +9,7 @@ linkflags.debug =   -g
 cxxflags.trace =    -DNDEBUG -DTRACE_ON -O3
 linkflags.trace =
 
-cxxflags.release =  -DNDEBUG -O3 -DEVAL
+cxxflags.release =  -DNDEBUG -O3 -DEVAL -I/usr/local/include/
 linkflags.release =
 
 cxxflags.gprof =    -DNDEBUG -DSAFE_EXIT -O3 -g -pg

@@ -42,6 +42,7 @@ using namespace std;
 static Glucose::EnumOption option_mode("MAIN", "mode", "How to interpret input.\n", "asp|sat|maxsat|pbs");
 Glucose::IntOption option_n("MAIN", "n", "Number of desired solutions. Non-positive integers are interpreted as unbounded.\n", 1, Glucose::IntRange(0, INT32_MAX));
 extern Glucose::EnumOption option_maxsat_strat;
+extern Glucose::EnumOption option_core_reduction;
 
 static aspino::AbstractSolver* solver;
 
@@ -78,9 +79,7 @@ int main(int argc, char** argv)
     Glucose::IntOption cpu_lim("MAIN", "cpu-lim","Limit on CPU time allowed in seconds.\n", INT32_MAX, Glucose::IntRange(0, INT32_MAX));
     Glucose::IntOption mem_lim("MAIN", "mem-lim","Limit on memory usage in megabytes.\n", INT32_MAX, Glucose::IntRange(0, INT32_MAX));
 
-    //Glucose::parseOptions(argc, argv, true);
-    option_mode = "maxsat";
-    option_maxsat_strat = "kdyn";
+    Glucose::parseOptions(argc, argv, true);
 
     if(strcmp(option_mode, "asp") == 0)
         solver = new AspSolver();
@@ -102,16 +101,38 @@ int main(int argc, char** argv)
     solver->parse(in);
     gzclose(in);
 
+
+    dbg("parsed");
+
+    MaxSatSolver *sv = (MaxSatSolver *) solver;
+    sv->dump();
+    //sv->mxp();
+
     solver->eliminate(true);
+    dbg("eliminated");
     if(!solver->okay()) {
         cout << "UNSATISFIABLE" << endl;
         cout << "Total time: " << currentTime() - starttime << endl;
         solver->exit(20);
     }
-    
+
+    cout << "graph digraph{" << endl;
+    int cfg[17] = {455, 340, 286, 256, 255, 254, 253, 240, 239, 238, 237, 198, 197, 108, 107, 76, 75 };
+
+//    sv->conflict.clear();
+//    for(int i = 0; i < 17; i++)
+//        sv->conflict.push(mkLit(cfg[i]-1));
+//
+//    cout << sv->conflict << endl;
+//
+//    sv->mergexplainMinimizeStd(9999);
+//
+//
+//    exit(0);
     lbool ret = solver->solve(option_n);
+    cout << "graph }" << endl;
     cout << "Total time: " << currentTime() - starttime << "ms" << endl;
-    
+
 #ifndef SAFE_EXIT
     solver->exit(ret == l_True ? 10 : ret == l_False ? 20 : 0);     // (faster than "return", which will invoke the destructor for 'Solver')
 #else

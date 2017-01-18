@@ -1,0 +1,3912 @@
+graph digraph{
+c ub 228
+conflict detected
+o 1
+conflict size before: 6
+conflict before: 
+~122 ~121 ~46 ~45 ~42 ~41 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n1__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n1__0_1->n1_n1__0_1_1_1
+graph n1_n1__0_1_1_1[label="[122 121 46 ]"];
+graph n1_n1__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n1__0_1->n1_n1__0_1_1_2
+graph n1_n1__0_1_1_2[label="[45 42 41 ]"];
+graph n1_n1__0_1_1_2[color=green]
+merged at depth 0 3 3
+45 42 41 122 121 46 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n1__0_1[label="[122 121 46 45 42 41 ][45 42 41 ](46 121 122 41 42 45 )"];
+Number of Conflicts 1
+conflicts after: 
+46 121 122 41 42 45 
+
+conflict after: 6
+~46 ~121 ~122 ~41 ~42 ~45 
+conflict detected
+o 2
+conflict size before: 6
+conflict before: 
+~132 ~131 ~58 ~57 ~54 ~53 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n2__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n2__0_1->n2_n2__0_1_1_1
+graph n2_n2__0_1_1_1[label="[132 131 58 ]"];
+graph n2_n2__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n2__0_1->n2_n2__0_1_1_2
+graph n2_n2__0_1_1_2[label="[57 54 53 ]"];
+graph n2_n2__0_1_1_2[color=green]
+merged at depth 0 3 3
+57 54 53 132 131 58 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n2__0_1[label="[132 131 58 57 54 53 ][57 54 53 ](58 131 132 53 54 57 )"];
+Number of Conflicts 1
+conflicts after: 
+58 131 132 53 54 57 
+
+conflict after: 6
+~58 ~131 ~132 ~53 ~54 ~57 
+conflict detected
+o 3
+conflict size before: 6
+conflict before: 
+~142 ~141 ~70 ~69 ~66 ~65 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n3__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n3__0_1->n3_n3__0_1_1_1
+graph n3_n3__0_1_1_1[label="[142 141 70 ]"];
+graph n3_n3__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n3__0_1->n3_n3__0_1_1_2
+graph n3_n3__0_1_1_2[label="[69 66 65 ]"];
+graph n3_n3__0_1_1_2[color=green]
+merged at depth 0 3 3
+69 66 65 142 141 70 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n3__0_1[label="[142 141 70 69 66 65 ][69 66 65 ](70 141 142 65 66 69 )"];
+Number of Conflicts 1
+conflicts after: 
+70 141 142 65 66 69 
+
+conflict after: 6
+~70 ~141 ~142 ~65 ~66 ~69 
+conflict detected
+o 4
+conflict size before: 42
+conflict before: 
+~150 ~149 ~145 ~144 ~143 ~140 ~135 ~134 ~133 ~130 ~124 ~123 ~120 ~119 ~112 ~111 ~110 ~109 ~108 ~105 ~101 ~100 ~98 ~91 ~90 ~89 ~80 ~79 ~78 ~77 ~72 ~71 ~68 ~67 ~62 ~60 ~59 ~55 ~48 ~47 ~44 ~43 
+conflict size: 42
+core size: 42
+consitency check for std::vector
+checked
+false
+graph n4__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n4__0_1->n4_n4__0_1_1_1
+graph n4_n4__0_1_1_1[label="[150 149 145 144 143 140 135 134 133 130 124 123 120 119 112 111 110 109 108 105 101 ]"];
+graph n4_n4__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n4__0_1->n4_n4__0_1_1_2
+graph n4_n4__0_1_1_2[label="[100 98 91 90 89 80 79 78 77 72 71 68 67 62 60 59 55 48 47 44 43 ]"];
+graph n4_n4__0_1_1_2[color=green]
+merged at depth 0 21 21
+100 98 91 90 89 80 79 78 77 72 71 68 67 62 60 59 55 48 47 44 43 150 149 145 144 143 140 135 134 133 130 124 123 120 119 112 111 110 109 108 105 101 
+merged
+inserted
+c1p 21
+consitency check for std::vector
+checked
+false
+c1p 21
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 21 into 10 and 11
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 11 into 5 and 6
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 6 into 3 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 5 into 2 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 10 into 5 and 5
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 5 into 2 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 5 into 2 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+return merged
+return merged
+bc2 21
+c2prime 21
+c1prime 21
+x 21
+bx 21
+x 21
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 21 into 10 and 11
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 11 into 5 and 6
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 6 into 3 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 5 into 2 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 10 into 5 and 5
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 5 into 2 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 5 into 2 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+return merged
+return merged
+c1prime 21 - c2prime 21 - cs 42
+remove all
+removed 21
+consitency check for std::vector
+checked
+true
+graph n4__0_1[label="[150 149 145 144 143 140 135 134 133 130 124 123 120 119 112 111 110 109 108 105 101 100 98 91 90 89 80 79 78 77 72 71 68 67 62 60 59 55 48 47 44 43 ][100 98 91 90 89 80 79 78 77 72 71 68 67 62 60 59 55 48 47 44 43 ](101 105 108 109 110 111 112 119 120 123 124 130 133 134 135 140 143 144 145 149 150 43 44 47 48 55 59 60 62 67 68 71 72 77 78 79 80 89 90 91 98 100 )"];
+Number of Conflicts 1
+conflicts after: 
+101 105 108 109 110 111 112 119 120 123 124 130 133 134 135 140 143 144 145 149 150 43 44 47 48 55 59 60 62 67 68 71 72 77 78 79 80 89 90 91 98 100 
+
+conflict after: 42
+~101 ~105 ~108 ~109 ~110 ~111 ~112 ~119 ~120 ~123 ~124 ~130 ~133 ~134 ~135 ~140 ~143 ~144 ~145 ~149 ~150 ~43 ~44 ~47 ~48 ~55 ~59 ~60 ~62 ~67 ~68 ~71 ~72 ~77 ~78 ~79 ~80 ~89 ~90 ~91 ~98 ~100 
+conflict detected
+o 5
+conflict size before: 8
+conflict before: 
+~170 ~169 ~106 ~104 ~103 ~99 ~61 ~56 
+conflict size: 8
+core size: 8
+consitency check for std::vector
+checked
+false
+graph n5__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n5__0_1->n5_n5__0_1_1_1
+graph n5_n5__0_1_1_1[label="[170 169 106 104 ]"];
+graph n5_n5__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n5__0_1->n5_n5__0_1_1_2
+graph n5_n5__0_1_1_2[label="[103 99 61 56 ]"];
+graph n5_n5__0_1_1_2[color=green]
+merged at depth 0 4 4
+103 99 61 56 170 169 106 104 
+merged
+inserted
+c1p 4
+consitency check for std::vector
+checked
+false
+c1p 4
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+bc2 4
+c2prime 4
+c1prime 4
+x 4
+bx 4
+x 4
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+c1prime 4 - c2prime 4 - cs 8
+remove all
+removed 4
+consitency check for std::vector
+checked
+true
+graph n5__0_1[label="[170 169 106 104 103 99 61 56 ][103 99 61 56 ](104 106 169 170 56 61 99 103 )"];
+Number of Conflicts 1
+conflicts after: 
+104 106 169 170 56 61 99 103 
+
+conflict after: 8
+~104 ~106 ~169 ~170 ~56 ~61 ~99 ~103 
+conflict detected
+o 6
+conflict size before: 8
+conflict before: 
+~192 ~191 ~136 ~129 ~97 ~94 ~93 ~92 
+conflict size: 8
+core size: 8
+consitency check for std::vector
+checked
+false
+graph n6__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n6__0_1->n6_n6__0_1_1_1
+graph n6_n6__0_1_1_1[label="[192 191 136 129 ]"];
+graph n6_n6__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n6__0_1->n6_n6__0_1_1_2
+graph n6_n6__0_1_1_2[label="[97 94 93 92 ]"];
+graph n6_n6__0_1_1_2[color=green]
+merged at depth 0 4 4
+97 94 93 92 192 191 136 129 
+merged
+inserted
+c1p 4
+consitency check for std::vector
+checked
+false
+c1p 4
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+bc2 4
+c2prime 4
+c1prime 4
+x 4
+bx 4
+x 4
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+c1prime 4 - c2prime 4 - cs 8
+remove all
+removed 4
+consitency check for std::vector
+checked
+true
+graph n6__0_1[label="[192 191 136 129 97 94 93 92 ][97 94 93 92 ](129 136 191 192 92 93 94 97 )"];
+Number of Conflicts 1
+conflicts after: 
+129 136 191 192 92 93 94 97 
+
+conflict after: 8
+~129 ~136 ~191 ~192 ~92 ~93 ~94 ~97 
+conflict detected
+o 7
+conflict size before: 6
+conflict before: 
+~202 ~201 ~146 ~139 ~107 ~102 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n7__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n7__0_1->n7_n7__0_1_1_1
+graph n7_n7__0_1_1_1[label="[202 201 146 ]"];
+graph n7_n7__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n7__0_1->n7_n7__0_1_1_2
+graph n7_n7__0_1_1_2[label="[139 107 102 ]"];
+graph n7_n7__0_1_1_2[color=green]
+merged at depth 0 3 3
+139 107 102 202 201 146 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n7__0_1[label="[202 201 146 139 107 102 ][139 107 102 ](146 201 202 102 107 139 )"];
+Number of Conflicts 1
+conflicts after: 
+146 201 202 102 107 139 
+
+conflict after: 6
+~146 ~201 ~202 ~102 ~107 ~139 
+conflict detected
+o 8
+conflict size before: 28
+conflict before: 
+~210 ~209 ~206 ~205 ~204 ~203 ~186 ~185 ~184 ~183 ~166 ~165 ~160 ~159 ~156 ~153 ~152 ~151 ~128 ~127 ~126 ~125 ~117 ~114 ~86 ~85 ~84 ~83 
+conflict size: 28
+core size: 28
+consitency check for std::vector
+checked
+false
+graph n8__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n8__0_1->n8_n8__0_1_1_1
+graph n8_n8__0_1_1_1[label="[210 209 206 205 204 203 186 185 184 183 166 165 160 159 ]"];
+graph n8_n8__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n8__0_1->n8_n8__0_1_1_2
+graph n8_n8__0_1_1_2[label="[156 153 152 151 128 127 126 125 117 114 86 85 84 83 ]"];
+graph n8_n8__0_1_1_2[color=green]
+merged at depth 0 14 14
+156 153 152 151 128 127 126 125 117 114 86 85 84 83 210 209 206 205 204 203 186 185 184 183 166 165 160 159 
+merged
+inserted
+c1p 14
+consitency check for std::vector
+checked
+false
+c1p 14
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 14 into 7 and 7
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 7 into 3 and 4
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 7 into 3 and 4
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+return merged
+bc2 14
+c2prime 14
+c1prime 14
+x 12
+bx 12
+x 12
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 14 into 7 and 7
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 7 into 3 and 4
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 7 into 3 and 4
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+return merged
+c1prime 14 - c2prime 14 - cs 26
+remove all
+removed 12
+consitency check for std::vector
+checked
+true
+graph n8__0_1[label="[210 209 206 205 204 203 186 185 184 183 166 165 160 159 156 153 152 151 128 127 126 125 117 114 86 85 84 83 ][156 153 152 151 128 127 126 125 117 114 86 85 84 83 205 204 ](159 160 165 166 183 184 185 186 203 206 209 210 83 84 85 86 114 117 125 126 127 128 151 152 153 156 )"];
+Number of Conflicts 1
+conflicts after: 
+159 160 165 166 183 184 185 186 203 206 209 210 83 84 85 86 114 117 125 126 127 128 151 152 153 156 
+
+conflict after: 26
+~159 ~160 ~165 ~166 ~183 ~184 ~185 ~186 ~203 ~206 ~209 ~210 ~83 ~84 ~85 ~86 ~114 ~117 ~125 ~126 ~127 ~128 ~151 ~152 ~153 ~156 
+conflict detected
+o 9
+conflict size before: 6
+conflict before: 
+~224 ~223 ~180 ~179 ~176 ~175 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n9__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n9__0_1->n9_n9__0_1_1_1
+graph n9_n9__0_1_1_1[label="[224 223 180 ]"];
+graph n9_n9__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n9__0_1->n9_n9__0_1_1_2
+graph n9_n9__0_1_1_2[label="[179 176 175 ]"];
+graph n9_n9__0_1_1_2[color=green]
+merged at depth 0 3 3
+179 176 175 224 223 180 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n9__0_1[label="[224 223 180 179 176 175 ][179 176 175 ](180 223 224 175 176 179 )"];
+Number of Conflicts 1
+conflicts after: 
+180 223 224 175 176 179 
+
+conflict after: 6
+~180 ~223 ~224 ~175 ~176 ~179 
+conflict detected
+o 10
+conflict size before: 6
+conflict before: 
+~218 ~217 ~172 ~171 ~168 ~167 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n10__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n10__0_1->n10_n10__0_1_1_1
+graph n10_n10__0_1_1_1[label="[218 217 172 ]"];
+graph n10_n10__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n10__0_1->n10_n10__0_1_1_2
+graph n10_n10__0_1_1_2[label="[171 168 167 ]"];
+graph n10_n10__0_1_1_2[color=green]
+merged at depth 0 3 3
+171 168 167 218 217 172 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n10__0_1[label="[218 217 172 171 168 167 ][171 168 167 ](172 217 218 167 168 171 )"];
+Number of Conflicts 1
+conflicts after: 
+172 217 218 167 168 171 
+
+conflict after: 6
+~172 ~217 ~218 ~167 ~168 ~171 
+conflict detected
+o 11
+conflict size before: 12
+conflict before: 
+~228 ~227 ~208 ~205 ~158 ~157 ~155 ~154 ~88 ~87 ~82 ~81 
+conflict size: 12
+core size: 12
+consitency check for std::vector
+checked
+false
+graph n11__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n11__0_1->n11_n11__0_1_1_1
+graph n11_n11__0_1_1_1[label="[228 227 208 205 158 157 ]"];
+graph n11_n11__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n11__0_1->n11_n11__0_1_1_2
+graph n11_n11__0_1_1_2[label="[155 154 88 87 82 81 ]"];
+graph n11_n11__0_1_1_2[color=green]
+merged at depth 0 6 6
+155 154 88 87 82 81 228 227 208 205 158 157 
+merged
+inserted
+c1p 6
+consitency check for std::vector
+checked
+false
+c1p 6
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 6 into 3 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+bc2 6
+c2prime 6
+c1prime 6
+x 6
+bx 6
+x 6
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 6 into 3 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+c1prime 6 - c2prime 6 - cs 12
+remove all
+removed 6
+consitency check for std::vector
+checked
+true
+graph n11__0_1[label="[228 227 208 205 158 157 155 154 88 87 82 81 ][155 154 88 87 82 81 ](157 158 205 208 227 228 81 82 87 88 154 155 )"];
+Number of Conflicts 1
+conflicts after: 
+157 158 205 208 227 228 81 82 87 88 154 155 
+
+conflict after: 12
+~157 ~158 ~205 ~208 ~227 ~228 ~81 ~82 ~87 ~88 ~154 ~155 
+conflict detected
+o 12
+conflict size before: 10
+conflict before: 
+~242 ~241 ~182 ~181 ~178 ~177 ~76 ~75 ~74 ~73 
+conflict size: 10
+core size: 10
+consitency check for std::vector
+checked
+false
+graph n12__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n12__0_1->n12_n12__0_1_1_1
+graph n12_n12__0_1_1_1[label="[242 241 182 181 178 ]"];
+graph n12_n12__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n12__0_1->n12_n12__0_1_1_2
+graph n12_n12__0_1_1_2[label="[177 76 75 74 73 ]"];
+graph n12_n12__0_1_1_2[color=green]
+merged at depth 0 5 5
+177 76 75 74 73 242 241 182 181 178 
+merged
+inserted
+c1p 5
+consitency check for std::vector
+checked
+false
+c1p 5
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 5 into 2 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+bc2 5
+c2prime 5
+c1prime 5
+x 5
+bx 5
+x 5
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 5 into 2 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+c1prime 5 - c2prime 5 - cs 10
+remove all
+removed 5
+consitency check for std::vector
+checked
+true
+graph n12__0_1[label="[242 241 182 181 178 177 76 75 74 73 ][177 76 75 74 73 ](178 181 182 241 242 73 74 75 76 177 )"];
+Number of Conflicts 1
+conflicts after: 
+178 181 182 241 242 73 74 75 76 177 
+
+conflict after: 10
+~178 ~181 ~182 ~241 ~242 ~73 ~74 ~75 ~76 ~177 
+conflict detected
+o 13
+conflict size before: 6
+conflict before: 
+~256 ~255 ~226 ~225 ~222 ~221 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n13__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n13__0_1->n13_n13__0_1_1_1
+graph n13_n13__0_1_1_1[label="[256 255 226 ]"];
+graph n13_n13__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n13__0_1->n13_n13__0_1_1_2
+graph n13_n13__0_1_1_2[label="[225 222 221 ]"];
+graph n13_n13__0_1_1_2[color=green]
+merged at depth 0 3 3
+225 222 221 256 255 226 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n13__0_1[label="[256 255 226 225 222 221 ][225 222 221 ](226 255 256 221 222 225 )"];
+Number of Conflicts 1
+conflicts after: 
+226 255 256 221 222 225 
+
+conflict after: 6
+~226 ~255 ~256 ~221 ~222 ~225 
+conflict detected
+o 14
+conflict size before: 6
+conflict before: 
+~244 ~243 ~207 ~204 ~118 ~113 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n14__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n14__0_1->n14_n14__0_1_1_1
+graph n14_n14__0_1_1_1[label="[244 243 207 ]"];
+graph n14_n14__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n14__0_1->n14_n14__0_1_1_2
+graph n14_n14__0_1_1_2[label="[204 118 113 ]"];
+graph n14_n14__0_1_1_2[color=green]
+merged at depth 0 3 3
+204 118 113 244 243 207 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n14__0_1[label="[244 243 207 204 118 113 ][204 118 113 ](207 243 244 113 118 204 )"];
+Number of Conflicts 1
+conflicts after: 
+207 243 244 113 118 204 
+
+conflict after: 6
+~207 ~243 ~244 ~113 ~118 ~204 
+conflict detected
+o 15
+conflict size before: 6
+conflict before: 
+~234 ~233 ~164 ~163 ~162 ~161 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n15__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n15__0_1->n15_n15__0_1_1_1
+graph n15_n15__0_1_1_1[label="[234 233 164 ]"];
+graph n15_n15__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n15__0_1->n15_n15__0_1_1_2
+graph n15_n15__0_1_1_2[label="[163 162 161 ]"];
+graph n15_n15__0_1_1_2[color=green]
+merged at depth 0 3 3
+163 162 161 234 233 164 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n15__0_1[label="[234 233 164 163 162 161 ][163 162 161 ](164 233 234 161 162 163 )"];
+Number of Conflicts 1
+conflicts after: 
+164 233 234 161 162 163 
+
+conflict after: 6
+~164 ~233 ~234 ~161 ~162 ~163 
+conflict detected
+o 16
+conflict size before: 6
+conflict before: 
+~262 ~261 ~214 ~211 ~51 ~50 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n16__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n16__0_1->n16_n16__0_1_1_1
+graph n16_n16__0_1_1_1[label="[262 261 214 ]"];
+graph n16_n16__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n16__0_1->n16_n16__0_1_1_2
+graph n16_n16__0_1_1_2[label="[211 51 50 ]"];
+graph n16_n16__0_1_1_2[color=green]
+merged at depth 0 3 3
+211 51 50 262 261 214 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n16__0_1[label="[262 261 214 211 51 50 ][211 51 50 ](214 261 262 50 51 211 )"];
+Number of Conflicts 1
+conflicts after: 
+214 261 262 50 51 211 
+
+conflict after: 6
+~214 ~261 ~262 ~50 ~51 ~211 
+conflict detected
+o 17
+conflict size before: 6
+conflict before: 
+~268 ~267 ~232 ~231 ~230 ~229 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n17__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n17__0_1->n17_n17__0_1_1_1
+graph n17_n17__0_1_1_1[label="[268 267 232 ]"];
+graph n17_n17__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n17__0_1->n17_n17__0_1_1_2
+graph n17_n17__0_1_1_2[label="[231 230 229 ]"];
+graph n17_n17__0_1_1_2[color=green]
+merged at depth 0 3 3
+231 230 229 268 267 232 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n17__0_1[label="[268 267 232 231 230 229 ][231 230 229 ](232 267 268 229 230 231 )"];
+Number of Conflicts 1
+conflicts after: 
+232 267 268 229 230 231 
+
+conflict after: 6
+~232 ~267 ~268 ~229 ~230 ~231 
+conflict detected
+o 18
+conflict size before: 6
+conflict before: 
+~250 ~249 ~196 ~195 ~194 ~193 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n18__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n18__0_1->n18_n18__0_1_1_1
+graph n18_n18__0_1_1_1[label="[250 249 196 ]"];
+graph n18_n18__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n18__0_1->n18_n18__0_1_1_2
+graph n18_n18__0_1_1_2[label="[195 194 193 ]"];
+graph n18_n18__0_1_1_2[color=green]
+merged at depth 0 3 3
+195 194 193 250 249 196 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n18__0_1[label="[250 249 196 195 194 193 ][195 194 193 ](196 249 250 193 194 195 )"];
+Number of Conflicts 1
+conflicts after: 
+196 249 250 193 194 195 
+
+conflict after: 6
+~196 ~249 ~250 ~193 ~194 ~195 
+conflict detected
+o 19
+conflict size before: 6
+conflict before: 
+~252 ~251 ~220 ~219 ~216 ~215 
+conflict size: 6
+core size: 6
+consitency check for std::vector
+checked
+false
+graph n19__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n19__0_1->n19_n19__0_1_1_1
+graph n19_n19__0_1_1_1[label="[252 251 220 ]"];
+graph n19_n19__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n19__0_1->n19_n19__0_1_1_2
+graph n19_n19__0_1_1_2[label="[219 216 215 ]"];
+graph n19_n19__0_1_1_2[color=green]
+merged at depth 0 3 3
+219 216 215 252 251 220 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 3
+c2prime 3
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+c1prime 3 - c2prime 3 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n19__0_1[label="[252 251 220 219 216 215 ][219 216 215 ](220 251 252 215 216 219 )"];
+Number of Conflicts 1
+conflicts after: 
+220 251 252 215 216 219 
+
+conflict after: 6
+~220 ~251 ~252 ~215 ~216 ~219 
+c ub 184
+conflict detected
+o 20
+conflict size before: 12
+conflict before: 
+~284 ~264 ~263 ~253 ~240 ~238 ~237 ~200 ~197 ~174 ~64 ~63 
+conflict size: 12
+core size: 12
+consitency check for std::vector
+checked
+false
+graph n20__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n20__0_1->n20_n20__0_1_1_1
+graph n20_n20__0_1_1_1[label="[284 264 263 253 240 238 ]"];
+graph n20_n20__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n20__0_1->n20_n20__0_1_1_2
+graph n20_n20__0_1_1_2[label="[237 200 197 174 64 63 ]"];
+graph n20_n20__0_1_1_2[color=green]
+merged at depth 0 6 6
+237 200 197 174 64 63 284 264 263 253 240 238 
+merged
+inserted
+c1p 6
+consitency check for std::vector
+checked
+false
+c1p 6
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 6 into 3 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+bc2 6
+c2prime 6
+c1prime 6
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 6 into 3 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+return merged
+c1prime 6 - c2prime 6 - cs 7
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n20__0_1[label="[284 264 263 253 240 238 237 200 197 174 64 63 ][237 200 197 174 64 63 264 240 238 ](253 263 284 63 64 174 200 )"];
+Number of Conflicts 1
+conflicts after: 
+253 263 284 63 64 174 200 
+
+conflict after: 7
+~253 ~263 ~284 ~63 ~64 ~174 ~200 
+conflict detected
+o 21
+conflict size before: 17
+conflict before: 
+~434 ~429 ~374 ~339 ~325 ~285 ~264 ~254 ~240 ~239 ~238 ~237 ~199 ~198 ~173 ~138 ~137 
+conflict size: 17
+core size: 17
+consitency check for std::vector
+checked
+false
+graph n21__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n21__0_1->n21_n21__0_1_1_1
+graph n21_n21__0_1_1_1[label="[434 429 374 339 325 285 264 254 ]"];
+graph n21_n21__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n21__0_1->n21_n21__0_1_1_2
+graph n21_n21__0_1_1_2[label="[240 239 238 237 199 198 173 138 137 ]"];
+graph n21_n21__0_1_1_2[color=green]
+merged at depth 0 8 9
+240 239 238 237 199 198 173 138 137 434 429 374 339 325 285 264 254 
+merged
+inserted
+c1p 8
+consitency check for std::vector
+checked
+false
+c1p 8
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 8 into 4 and 4
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+return merged
+return merged
+bc2 9
+c2prime 9
+c1prime 8
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 9 into 4 and 5
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 5 into 2 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+c1prime 8 - c2prime 9 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n21__0_1[label="[434 429 374 339 325 285 264 254 240 239 238 237 199 198 173 138 137 ][240 239 238 237 199 198 173 138 137 429 374 339 285 254 ](264 325 434 137 138 173 )"];
+Number of Conflicts 1
+conflicts after: 
+264 325 434 137 138 173 
+
+conflict after: 6
+~264 ~325 ~434 ~137 ~138 ~173 
+conflict detected
+o 22
+conflict size before: 22
+conflict before: 
+~440 ~435 ~429 ~374 ~339 ~326 ~285 ~274 ~266 ~265 ~254 ~240 ~239 ~238 ~237 ~199 ~198 ~197 ~148 ~147 ~116 ~115 
+conflict size: 22
+core size: 22
+consitency check for std::vector
+checked
+false
+graph n22__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n22__0_1->n22_n22__0_1_1_1
+graph n22_n22__0_1_1_1[label="[440 435 429 374 339 326 285 274 266 265 254 ]"];
+graph n22_n22__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n22__0_1->n22_n22__0_1_1_2
+graph n22_n22__0_1_1_2[label="[240 239 238 237 199 198 197 148 147 116 115 ]"];
+graph n22_n22__0_1_1_2[color=green]
+merged at depth 0 11 11
+240 239 238 237 199 198 197 148 147 116 115 440 435 429 374 339 326 285 274 266 265 254 
+merged
+inserted
+c1p 11
+consitency check for std::vector
+checked
+false
+c1p 11
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 11 into 5 and 6
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 6 into 3 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 5 into 2 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+return merged
+return merged
+bc2 11
+c2prime 11
+c1prime 11
+x 5
+bx 5
+x 5
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 11 into 5 and 6
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 6 into 3 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 5 into 2 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+return merged
+return merged
+c1prime 11 - c2prime 11 - cs 10
+remove all
+removed 5
+consitency check for std::vector
+checked
+true
+graph n22__0_1[label="[440 435 429 374 339 326 285 274 266 265 254 240 239 238 237 199 198 197 148 147 116 115 ][240 239 238 237 199 198 197 148 147 116 115 435 429 339 326 265 254 ](266 274 285 374 440 115 147 198 199 239 )"];
+Number of Conflicts 1
+conflicts after: 
+266 274 285 374 440 115 147 198 199 239 
+
+conflict after: 10
+~266 ~274 ~285 ~374 ~440 ~115 ~147 ~198 ~199 ~239 
+conflict detected
+o 23
+conflict size before: 13
+conflict before: 
+~344 ~260 ~248 ~247 ~246 ~245 ~213 ~212 ~189 ~188 ~187 ~52 ~49 
+conflict size: 13
+core size: 13
+consitency check for std::vector
+checked
+false
+graph n23__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n23__0_1->n23_n23__0_1_1_1
+graph n23_n23__0_1_1_1[label="[344 260 248 247 246 245 ]"];
+graph n23_n23__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n23__0_1->n23_n23__0_1_1_2
+graph n23_n23__0_1_1_2[label="[213 212 189 188 187 52 49 ]"];
+graph n23_n23__0_1_1_2[color=green]
+merged at depth 0 6 7
+213 212 189 188 187 52 49 344 260 248 247 246 245 
+merged
+inserted
+c1p 6
+consitency check for std::vector
+checked
+false
+c1p 6
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 6 into 3 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+bc2 7
+c2prime 7
+c1prime 6
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 7 into 3 and 4
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+c1prime 6 - c2prime 7 - cs 8
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n23__0_1[label="[344 260 248 247 246 245 213 212 189 188 187 52 49 ][213 212 189 188 187 52 49 248 246 245 ](247 260 344 49 52 189 212 213 )"];
+Number of Conflicts 1
+conflicts after: 
+247 260 344 49 52 189 212 213 
+
+conflict after: 8
+~247 ~260 ~344 ~49 ~52 ~189 ~212 ~213 
+conflict detected
+o 24
+conflict size before: 13
+conflict before: 
+~454 ~390 ~345 ~265 ~259 ~258 ~248 ~246 ~245 ~190 ~188 ~187 ~116 
+conflict size: 13
+core size: 13
+consitency check for std::vector
+checked
+false
+graph n24__0_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n24__0_1->n24_n24__0_1_1_1
+graph n24_n24__0_1_1_1[label="[454 390 345 265 259 258 ]"];
+graph n24_n24__0_1_1_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n24__0_1->n24_n24__0_1_1_2
+graph n24_n24__0_1_1_2[label="[248 246 245 190 188 187 116 ]"];
+graph n24_n24__0_1_1_2[color=green]
+merged at depth 0 6 7
+248 246 245 190 188 187 116 454 390 345 265 259 258 
+merged
+inserted
+c1p 6
+consitency check for std::vector
+checked
+false
+c1p 6
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 6 into 3 and 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+bc2 7
+c2prime 7
+c1prime 6
+x 4
+bx 4
+x 4
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 7 into 3 and 4
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+return merged
+c1prime 6 - c2prime 7 - cs 8
+remove all
+removed 4
+consitency check for std::vector
+checked
+true
+graph n24__0_1[label="[454 390 345 265 259 258 248 246 245 190 188 187 116 ][248 246 245 190 188 187 116 259 258 ](265 345 390 454 116 187 188 248 )"];
+Number of Conflicts 1
+conflicts after: 
+265 345 390 454 116 187 188 248 
+
+conflict after: 8
+~265 ~345 ~390 ~454 ~116 ~187 ~188 ~248 
+conflict detected
+o 25
+conflict size before: 15
+conflict before: 
+~461 ~455 ~419 ~414 ~379 ~346 ~286 ~269 ~259 ~258 ~257 ~246 ~245 ~190 ~95 
+conflict size: 15
+core size: 15
+consitency check for std::vector
+checked
+false
+graph n25__0_1[color=red]
+consitency check for std::vector
+checked
+false
+graph n25_n25__0_1_1_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n25_n25__0_1_1_1->n25_n25_n25__0_1_1_1_2_1
+graph n25_n25_n25__0_1_1_1_2_1[label="[461 455 419 ]"];
+graph n25_n25_n25__0_1_1_1_2_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n25_n25__0_1_1_1->n25_n25_n25__0_1_1_1_2_2
+graph n25_n25_n25__0_1_1_1_2_2[label="[414 379 346 286 ]"];
+graph n25_n25_n25__0_1_1_1_2_2[color=green]
+merged at depth 1 3 4
+414 379 346 286 461 455 419 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+bc2 4
+c2prime 4
+c1prime 3
+x 1
+bx 1
+x 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+return merged
+return merged
+c1prime 3 - c2prime 4 - cs 4
+remove all
+removed 1
+consitency check for std::vector
+checked
+true
+graph n25__0_1->n25_n25__0_1_1_1
+graph n25_n25__0_1_1_1[label="[461 455 419 414 379 346 286 ][414 379 346 286 455 419 ](461 286 346 379 )"];
+consitency check for std::vector
+checked
+true
+graph n25__0_1->n25_n25__0_1_1_2
+graph n25_n25__0_1_1_2[label="[269 259 258 257 246 245 190 95 ]"];
+graph n25_n25__0_1_1_2[color=green]
+merged at depth 0 6 8
+269 259 258 257 246 245 190 95 414 379 346 286 455 419 
+merged
+inserted
+c1p 6
+consitency check for std::vector
+checked
+true
+graph n25__0_1[label="[461 455 419 414 379 346 286 269 259 258 257 246 245 190 95 ][269 259 258 257 246 245 190 95 414 379 346 286 455 419 ](461 286 346 379 )"];
+Number of Conflicts 1
+conflicts after: 
+461 286 346 379 
+
+conflict after: 4
+~461 ~286 ~346 ~379 
+conflict detected
+o 26
+conflict size before: 14
+conflict before: 
+~468 ~462 ~455 ~419 ~380 ~347 ~287 ~259 ~258 ~257 ~254 ~246 ~245 ~190 
+conflict size: 14
+core size: 14
+consitency check for std::vector
+checked
+false
+graph n26__0_1[color=red]
+consitency check for std::vector
+checked
+false
+graph n26_n26__0_1_1_1[color=red]
+consitency check for std::vector
+checked
+true
+graph n26_n26__0_1_1_1->n26_n26_n26__0_1_1_1_2_1
+graph n26_n26_n26__0_1_1_1_2_1[label="[468 462 455 ]"];
+graph n26_n26_n26__0_1_1_1_2_1[color=green]
+consitency check for std::vector
+checked
+true
+graph n26_n26__0_1_1_1->n26_n26_n26__0_1_1_1_2_2
+graph n26_n26_n26__0_1_1_1_2_2[label="[419 380 347 287 ]"];
+graph n26_n26_n26__0_1_1_1_2_2[color=green]
+merged at depth 1 3 4
+419 380 347 287 468 462 455 
+merged
+inserted
+c1p 3
+consitency check for std::vector
+checked
+false
+c1p 3
+getting conflicts
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 3 into 1 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+bc2 4
+c2prime 4
+c1prime 3
+x 3
+bx 3
+x 3
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 4 into 2 and 2
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+false
+empty
+in get conflict std::vector
+c size 1return merged
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+rec get conflict
+split 2 into 1 and 1
+in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1in get conflict std::vector
+consitency check for std::vector
+checked
+true
+c size 1return merged
+return merged
+c1prime 3 - c2prime 4 - cs 6
+remove all
+removed 3
+consitency check for std::vector
+checked
+true
+graph n26__0_1->n26_n26__0_1_1_1
+graph n26_n26__0_1_1_1[label="[468 462 455 419 380 347 287 ][419 380 347 287 ](455 462 468 347 380 419 )"];
+consitency check for std::vector
+checked
+true
+graph n26__0_1->n26_n26__0_1_1_2
+graph n26_n26__0_1_1_2[label="[259 258 257 254 246 245 190 ]"];
+graph n26_n26__0_1_1_2[color=green]
+merged at depth 0 4 7
+259 258 257 254 246 245 190 419 380 347 287 
+merged
+inserted
+c1p 4
+consitency check for std::vector
+checked
+true
+graph n26__0_1[label="[468 462 455 419 380 347 287 259 258 257 254 246 245 190 ][259 258 257 254 246 245 190 419 380 347 287 ](455 462 468 347 380 419 )"];
+Number of Conflicts 1
+conflicts after: 
+455 462 468 347 380 419 
+
+conflict after: 6
+~455 ~462 ~468 ~347 ~380 ~419 
+c ub 26
+o 26
+s OPTIMUM FOUND
+v 1 -2 3 -4 5 -6 7 -8 9 -10 11 -12 13 -14 15 -16 17 -18 19 -20 21 -22 23 -24 25 -26 27 -28 29 -30 31 -32 33 -34 35 -36 37 -38 39 -40
+graph }
+Total time: 513ms

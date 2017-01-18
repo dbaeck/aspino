@@ -23,7 +23,7 @@
 
 namespace aspino {
 
-class SatSolver : public AbstractSolver, protected Glucose::SimpSolver {
+class SatSolver : public AbstractSolver, public Glucose::SimpSolver {
 public:
     SatSolver() : inVars(0), status(l_Undef) { certifiedUNSAT = false; parsing = false;}
     virtual ~SatSolver() {}

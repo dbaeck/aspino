@@ -11,6 +11,7 @@ namespace aspino {
 
     void MaxSatSolver::getConflict(vec<Lit> &b, vec<Lit> &d, vec<Lit> &c, vec<Lit> &out) {
 
+
         out.clear();
         if (d.size() != 0 && !isConsistent(b)) {
             // return empty set
@@ -42,25 +43,23 @@ namespace aspino {
 
     bool MaxSatSolver::isConsistent(vec<Lit> &toCheck) {
 
-        uint64_t budget = conflicts - lastConflict;
-
+        cout << "graph consistency2;" << endl;
+        cout << "consitency check for Glucose::vec" << endl;
         lvec oldAssumptions;
         assumptions.moveTo(oldAssumptions);
-        toCheck.moveTo(assumptions);
+        toCheck.copyTo(assumptions);
 
-        float sumLBD_ = sumLBD;
-        uint64_t conflictsRestarts_ = conflictsRestarts;
-        sumLBD = 0;
-        conflictsRestarts = 0;
-        setConfBudget(budget);
         PseudoBooleanSolver::solve();
-        budgetOff();
-        sumLBD += sumLBD_;
-        conflictsRestarts += conflictsRestarts_;
+        //oldAssumptions.moveTo(assumptions);
 
-        oldAssumptions.moveTo(assumptions);
+        if(status == l_False)
+            cout << "false" << endl;
+        if(status == l_True)
+            cout << "true" << endl;
+        if(status == l_Undef)
+            cout << "undef" << endl;
 
-        return (status == l_Undef);
+        return (status == l_True);
     }
 
     std::vector<std::vector<Lit> > MaxSatSolver::findConflicts(vec<Lit> &b, vec<Lit> &c, vec<Lit> &cprime) {
@@ -169,6 +168,7 @@ namespace aspino {
             std::vector<Lit> cf = conflicts[0];
             lvec cfg;
             vecCast(cf, cfg);
+            aspino::removeAll(assumptions, cfg, assumptions);
             cancelUntil(0);
             cfg.moveTo(conflict);
         }
